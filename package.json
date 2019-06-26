@@ -4,5 +4,8 @@
   "main": "index.js",
   "repository": "git@github.com:benoitemile/apollo-redis-cache.git",
   "author": "Benoît Emile <bemile@maisonsdumonde.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "ioredis": "^4.10.0"
+  }
 }
