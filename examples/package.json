@@ -7,7 +7,9 @@
     "dev": "node index.js"
   },
   "dependencies": {
+    "apollo-datasource-rest": "^0.5.0",
     "apollo-server": "^2.6.7",
-    "graphql": "^14.4.0"
+    "graphql": "^14.4.0",
+    "ioredis": "^4.10.0"
   }
 }
