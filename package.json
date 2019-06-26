@@ -1,6 +1,6 @@
 {
   "name": "apollo-redis-cache",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "main": "index.js",
   "repository": "git@github.com:benoitemile/apollo-redis-cache.git",
   "author": "Benoît Emile <bemile@maisonsdumonde.com>",
