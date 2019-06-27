@@ -18,6 +18,7 @@ class RedisCache {
     this.client = client;
   }
   set(key, value, options) {
+    if (!this.isWorking) return false;
     const { ttl } = Object.assign({}, this.defaultSetOptions, options);
     return this.client
       .set(key, value, 'EX', ttl)
