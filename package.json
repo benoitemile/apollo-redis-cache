@@ -6,6 +6,7 @@
   "author": "Benoît Emile <bemile@maisonsdumonde.com>",
   "license": "MIT",
   "dependencies": {
+    "consola": "^2.9.0",
     "ioredis": "^4.10.0"
   }
 }
