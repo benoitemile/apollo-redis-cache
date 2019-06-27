@@ -1,4 +1,5 @@
 const ioredis = require('ioredis');
+const consola = require('consola');
 
 class RedisCache {
   constructor(options) {
@@ -11,7 +12,7 @@ class RedisCache {
         this.isWorking = true;
       })
       .on('error', err => {
-        console.error('ERROR:', err)
+        consola.error('ERROR:', err)
         this.isWorking = false;
       });
     this.client = client;
@@ -21,7 +22,7 @@ class RedisCache {
     return this.client
       .set(key, value, 'EX', ttl)
       .catch(err => {
-        console.error(err);
+        consola.error(err);
       });
   }
   get(key) {
@@ -29,7 +30,7 @@ class RedisCache {
     return this.client
       .get(key)
       .catch(err => {
-        console.error(err);
+        consola.error(err);
       });
   }
   delete(key) {
@@ -37,7 +38,7 @@ class RedisCache {
     return this.client
       .del(key)
       .catch(err => {
-        console.error(err);
+        consola.error(err);
       });
   }
   flush() {
@@ -45,14 +46,14 @@ class RedisCache {
     return this.client
       .flushdb()
       .catch(err => {
-        console.error(err);
+        consola.error(err);
       });
   }
   close() {
     return this.client
       .quit()
       .catch(err => {
-        console.error(err);
+        consola.error(err);
       });
   }
 }
