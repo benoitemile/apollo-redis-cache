@@ -1,4 +1,4 @@
-const { ApolloServer, gql } = require('apollo-server');
+const { ApolloServer, gql } = require('apollo-server-micro');
 const { RedisCache } = require( 'apollo-redis-cache');
 
 const typeDefs = `
@@ -43,8 +43,4 @@ const server = new ApolloServer({
   dataSources: () => ({
     moviesAPI: new MoviesAPI(),
   }),
-});
-
-server.listen().then(({ url }) => {
-  console.log(`🚀 Server ready at ${url}`);
 });
