@@ -1,6 +1,6 @@
 # apollo-redis-cache
 
-This package is a fork of [Apollo Server Cache Redis](https://github.com/apollographql/apollo-server/tree/master/packages/apollo-server-cache-redis) but written in javascript and the goal is for the Apollo Server to keep answering data even if Redis server is down.
+This package is a fork of [Apollo Server Cache Redis](https://github.com/apollographql/apollo-server/tree/master/packages/apollo-server-cache-redis) but written in javascript and with the goal of having the Apollo Server always up even if Redis server is down.
 
 ## RedisCache
 
